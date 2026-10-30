@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My profile - InternConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>My profile</h1>
+    <p>Tell us about yourself once and we do the matching.</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="opportunities.html">Opportunities</a></li>
+      <li><a href="profile.html" aria-current="page">My profile</a></li>
+      <li><a href="applications.html">Applications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Your details</legend>
+        <label for="full-name">Full name</label>
+        <input type="text" id="full-name" name="full_name" required>
+        <label for="student-no">Student number</label>
+        <input type="text" id="student-no" name="student_no" required>
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required>
+      </fieldset>
+      <fieldset>
+        <legend>Your studies</legend>
+        <label for="programme">Programme</label>
+        <select id="programme" name="programme" required>
+          <option value="">Choose a programme</option>
+          <option value="bbit">Bachelor of Business Information Technology</option>
+          <option value="other">Other programme</option>
+        </select>
+        <label for="skills">Skills</label>
+        <textarea id="skills" name="skills" rows="4" placeholder="For example: Java, SQL, Excel"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Availability and preferences</legend>
+        <label for="start">Available from</label>
+        <input type="date" id="start" name="start" required>
+        <label for="region">Preferred region</label>
+        <select id="region" name="region">
+          <option value="">Any region</option>
+          <option value="nairobi">Nairobi</option>
+          <option value="kajiado">Kajiado</option>
+          <option value="kisumu">Kisumu</option>
+        </select>
+      </fieldset>
+      <label for="consent">
+        <input type="checkbox" id="consent" name="consent" required>
+        I agree that my profile may be used for matching.
+      </label>
+      <button type="submit">Save profile</button>
+    </form>
+  </main>
+  <aside>
+    <h2>Before you apply</h2>
+    <ul>
+      <li>Complete your <a href="profile.html">student profile</a>.</li>
+      <li>Check that the organisation is accepted by the university.</li>
+      <li>Read why each opportunity matched you.</li>
+    </ul>
+  </aside>
+  <footer>
+    <p>InternConnect, School of Computing and Engineering Sciences, Strathmore University, Nairobi.</p>
+    <p>Site built by Vianna Kusuubira, DBT Year 1, 2026.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* House style - main #237577 ground #F8F7F2 ink #16263A accent #C79D55
+   headings: Georgia, serif   body: Aptos, sans-serif */
+
+/* 1 - house style: body, h1, h2, a, header, nav, footer */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background: #F8F7F2;
+    color: #16263A;
+    line-height: 1.6;
+    font-family: Aptos, 'Segoe UI', Arial, sans-serif;
+    overflow-wrap: anywhere;
+}
+h1, h2, h3, caption{
+    font-family: Georgia, serif;
+    line-height: 1.25;
+}
+a{
+    color: #237577;
+}
+header{
+    background: #237577;
+    color: #F8F7F2;
+}
+nav{
+    background: #16263A;
+}
+nav a{
+    color: #F8F7F2;
+}
+nav a[aria-current="page"]{
+    border-bottom: 3px solid #C79D55;
+}
+footer{
+    background: #237577;
+    color: #F8F7F2;
+    border-top: 3px solid #C79D55;
+}
+footer p{
+    margin: 0.25rem 0;
+}
+header, main, aside, footer{
+    padding: 1rem;
+}
+img, input, select, textarea{
+    max-width: 100%;
+}
+
+/* 2 - layout: the grid, the nav row, the cards */
+body{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 18rem;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+}
+header{grid-area: header;}
+nav{grid-area: nav;}
+main{grid-area: main;}
+aside{grid-area: aside;}
+footer{grid-area: footer;}
+nav{
+    position: sticky;
+    top: 0;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.75rem 1rem;
+}
+aside{
+    border-left: 4px solid #C79D55;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.card{
+    flex: 1 1 14rem;
+    border: 1px solid #237577;
+    border-top: 4px solid #C79D55;
+    padding: 0 1rem 0.5rem;
+}
+
+/* 3 - tables: opportunities.html, applications.html */
+.table-scroll{
+    overflow-x: auto;
+}
+table{
+    width: 100%;
+    min-width: 34rem;
+    border-collapse: collapse;
+}
+caption{
+    text-align: left;
+    padding: 0.5rem 0;
+    font-weight: 600;
+}
+th, td{
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 1px solid #237577;
+}
+thead th{
+    background: #237577;
+    color: #F8F7F2;
+}
+
+/* 4 - forms: profile.html, contact.html */
+fieldset{
+    min-width: 0;
+    margin: 0 0 1rem;
+    border: 1px solid #237577;
+}
+legend{
+    font-family: Georgia, serif;
+    padding: 0 0.5rem;
+}
+label{
+    display: block;
+    margin-top: 0.75rem;
+    font-weight: 700;
+}
+input, select, textarea{
+    display: block;
+    width: 100%;
+    max-width: 30rem;
+    padding: 0.5rem;
+    font: inherit;
+    color: #16263A;
+    background: #F8F7F2;
+    border: 1px solid #16263A;
+}
+input[type="checkbox"]{
+    display: inline;
+    width: auto;
+}
+button{
+    margin-top: 1rem;
+    padding: 0.6rem 1.25rem;
+    font: inherit;
+    font-weight: 700;
+    color: #F8F7F2;
+    background: #237577;
+    border: 0;
+    border-bottom: 3px solid #C79D55;
+}
+
+/* 5 - phone: keep this last */
+@media (max-width: 700px){
+    body{
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    }
+    nav{
+        position: static;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    aside{
+        border-left: 0;
+        border-top: 4px solid #C79D55;
+    }
+}
